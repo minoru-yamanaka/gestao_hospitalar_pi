@@ -9,9 +9,10 @@ class ConsultaDAO{
       $this->bd = Conexao::getInstance();  
     }
     public function getAll(){
-        $sql="SELECT * FROM consultas";
+        $sql="SELECT * FROM consulta";
         $consultas=[];
         $stmt= $this->bd->query($sql);
+        
         while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
          $consultas[] = new Consultas($row['id'],
                                       $row['data'],
