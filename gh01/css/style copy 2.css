@@ -1,0 +1,632 @@
+/*
+ * CSS para Sistema Hospitalar - Versão Otimizada e Comentada
+ *
+ * Este arquivo define os estilos globais e componentes da interface do usuário
+ * para um sistema hospitalar, garantindo uma aparência moderna e responsiva.
+ *
+ * Certifique-se de que este arquivo esteja em: css/estilo.css
+ * E adicione nos arquivos PHP: <link rel="stylesheet" href="css/estilo.css">
+ */
+
+/* ==============================
+   1. Reset e Configurações Globais
+   ============================== */
+
+/* Reseta as margens e preenchimentos padrão de todos os elementos e define o modelo de caixa (box-sizing)
+   para 'border-box', o que significa que padding e border são incluídos na largura/altura total do elemento. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define os estilos básicos para o corpo da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte padrão */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Gradiente de fundo suave */
+    min-height: 100vh; /* Garante que o corpo ocupe pelo menos 100% da altura da viewport */
+    color: #333; /* Cor do texto padrão */
+    line-height: 1.6; /* Altura da linha para melhor legibilidade */
+}
+
+/* Estilo para contêineres principais de largura limitada */
+.container {
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente na página */
+    padding: 20px; /* Espaçamento interno */
+}
+
+/* ==============================
+   2. Header e Navegação
+   ============================== */
+
+/* Estilos para o cabeçalho principal da página */
+header {
+    background: white; /* Fundo branco */
+    padding: 2rem; /* Espaçamento interno */
+    border-radius: 15px; /* Cantos arredondados */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Sombra suave para profundidade */
+    margin-bottom: 2rem; /* Margem inferior */
+    text-align: center; /* Centraliza o texto e elementos inline-block dentro do header */
+}
+
+/* Estilos para o título principal (h1) dentro do cabeçalho */
+header h1 {
+    color: #4a5568; /* Cor do título */
+    font-size: 2.5rem; /* Tamanho da fonte */
+    margin-bottom: 1rem; /* Margem inferior */
+}
+
+/* Estilos para o elemento <nav> que contém a navegação */
+nav {
+    margin-top: 1rem; /* Margem superior para separar do título */
+}
+
+/* Estilos para a lista não ordenada (ul) dentro da navegação */
+nav ul {
+    list-style: none; /* Remove marcadores de lista padrão */
+    display: flex; /* Usa Flexbox para organizar os itens de menu em linha */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas menores */
+    gap: 1rem; /* Espaçamento entre os itens do menu */
+    justify-content: center; /* Centraliza os itens do menu horizontalmente */
+    padding-left: 0; /* Remove o padding padrão da lista */
+}
+
+/* Estilos para cada item de lista (li) dentro da navegação */
+nav ul li {
+    margin: 0; /* Remove margens padrão que poderiam ser adicionadas por navegadores */
+}
+
+/* Estilos para links de navegação */
+nav a {
+    display: inline-block; /* Permite definir padding e largura/altura */
+    padding: 0.75rem 1.5rem; /* Preenchimento interno */
+    background: linear-gradient(135deg, #667eea, #764ba2); /* Gradiente de fundo */
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado padrão dos links */
+    border-radius: 8px; /* Cantos arredondados */
+    font-weight: 600; /* Peso da fonte */
+    transition: all 0.3s ease; /* Transição suave para hover effects */
+    border: 2px solid transparent; /* Borda transparente para transição */
+}
+
+/* Efeito ao passar o mouse sobre os links de navegação */
+nav a:hover {
+    transform: translateY(-2px); /* Levanta o link ligeiramente */
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4); /* Adiciona sombra */
+    background: linear-gradient(135deg, #5a67d8, #6b46c1); /* Muda o gradiente */
+}
+
+/* Estilos específicos para uma navegação que é filha direta do <body> (ex: navegação de login/logout no topo) */
+body > nav {
+    background: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    backdrop-filter: blur(10px); /* Efeito de desfoque no que está por trás */
+    padding: 1rem 2rem; /* Espaçamento interno */
+    margin-bottom: 2rem; /* Margem inferior */
+    border-radius: 0 0 15px 15px; /* Cantos arredondados apenas na parte inferior */
+    display: flex; /* Usa Flexbox */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 1rem; /* Espaçamento entre os itens */
+}
+
+/* Estilos para os links dentro da navegação superior (login/logout) */
+body > nav a {
+    padding: 0.5rem 1rem; /* Preenchimento menor */
+    font-size: 0.9rem; /* Tamanho da fonte menor */
+    background: rgba(255, 255, 255, 0.2); /* Fundo um pouco mais opaco */
+    backdrop-filter: blur(5px); /* Desfoque menor */
+}
+
+/* ==============================
+   3. Formulários
+   ============================== */
+
+/* Estilos para todos os elementos <form> */
+form {
+    background: white; /* Fundo branco */
+    padding: 2rem; /* Espaçamento interno */
+    border-radius: 15px; /* Cantos arredondados */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Sombra suave */
+    margin-bottom: 2rem; /* Margem inferior */
+}
+
+/* Estilos para layouts de formulário em grade (usando CSS Grid) */
+.form-grid {
+    display: grid; /* Ativa CSS Grid */
+    /* Cria colunas que se ajustam automaticamente, com largura mínima de 300px e ocupam 1 fração do espaço disponível */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem; /* Espaçamento entre as células da grade */
+    margin-bottom: 2rem; /* Margem inferior */
+}
+
+/* Estilos para grupos de formulário (label + input) e divs genéricas, usando Flexbox */
+.form-group, div { /* ATENÇÃO: 'div' aqui aplica a muitas divs. Considere usar apenas '.form-group' */
+    display: flex; /* Usa Flexbox */
+    flex-direction: column; /* Organiza os itens em coluna (um abaixo do outro) */
+    margin-bottom: 1rem; /* Margem inferior para separar grupos */
+}
+
+/* Estilos para todos os elementos <label> */
+label {
+    font-weight: 600; /* Peso da fonte negrito */
+    color: #4a5568; /* Cor do texto */
+    margin-bottom: 0.5rem; /* Margem inferior para separar do campo de input */
+}
+
+/* Estilos para diversos tipos de campos de entrada (input, select, textarea) */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+select,
+textarea {
+    padding: 0.75rem; /* Preenchimento interno */
+    border: 2px solid #e2e8f0; /* Borda cinza clara */
+    border-radius: 8px; /* Cantos arredondados */
+    font-size: 1rem; /* Tamanho da fonte */
+    transition: border-color 0.3s ease; /* Transição suave para a cor da borda */
+    background: white; /* Fundo branco */
+}
+
+/* Efeito ao focar nos campos de entrada */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none; /* Remove o contorno padrão do navegador */
+    border-color: #667eea; /* Muda a cor da borda para um tom de azul/roxo */
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1); /* Adiciona uma sombra suave de foco */
+}
+
+/* ==============================
+   4. Botões
+   ============================== */
+
+/* Estilos gerais para botões e elementos com a classe .btn */
+button,
+.btn {
+    display: inline-flex; /* Usa inline-flex para alinhar conteúdo e permitir espaçamento interno */
+    align-items: center; /* Centraliza verticalmente o conteúdo (texto/ícone) do botão */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo do botão */
+    padding: 0.75rem 1.5rem; /* Preenchimento interno */
+    border: none; /* Remove a borda padrão */
+    border-radius: 8px; /* Cantos arredondados */
+    font-size: 1rem; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: all 0.3s ease; /* Transição suave para hover effects */
+    text-decoration: none; /* Remove sublinhado para links usados como botões */
+    background: linear-gradient(135deg, #667eea, #764ba2); /* Gradiente de fundo padrão */
+    color: white; /* Cor do texto */
+    margin: 0.5rem 0; /* Margem vertical para separar botões empilhados */
+}
+
+/* Efeito ao passar o mouse sobre botões */
+button:hover,
+.btn:hover {
+    transform: translateY(-2px); /* Levanta o botão ligeiramente */
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4); /* Adiciona sombra */
+    background: linear-gradient(135deg, #5a67d8, #6b46c1); /* Muda o gradiente */
+}
+
+/* Estilos para botões de tipo "submit" (geralmente verde) */
+button[type="submit"] {
+    background: linear-gradient(135deg, #48bb78, #38a169); /* Gradiente de fundo verde */
+}
+
+/* Efeito ao passar o mouse sobre botões de tipo "submit" */
+button[type="submit"]:hover {
+    background: linear-gradient(135deg, #38a169, #2f855a); /* Muda o gradiente para um tom mais escuro */
+    box-shadow: 0 5px 15px rgba(72, 187, 120, 0.4); /* Adiciona sombra verde */
+}
+
+/* Estilos para botão de edição (laranja) */
+.btn-edit {
+    background: linear-gradient(135deg, #ed8936, #dd6b20); /* Gradiente laranja */
+    padding: 0.5rem 1rem; /* Preenchimento menor */
+    font-size: 0.875rem; /* Tamanho da fonte menor */
+}
+
+/* Estilos para botão de exclusão (vermelho) */
+.btn-delete {
+    background: linear-gradient(135deg, #f56565, #e53e3e); /* Gradiente vermelho */
+    padding: 0.5rem 1rem; /* Preenchimento menor */
+    font-size: 0.875rem; /* Tamanho da fonte menor */
+}
+
+/* Efeito ao passar o mouse sobre o botão de edição */
+.btn-edit:hover {
+    background: linear-gradient(135deg, #dd6b20, #c05621); /* Muda o gradiente */
+    box-shadow: 0 3px 10px rgba(237, 137, 54, 0.4); /* Adiciona sombra laranja */
+}
+
+/* Efeito ao passar o mouse sobre o botão de exclusão */
+.btn-delete:hover {
+    background: linear-gradient(135deg, #e53e3e, #c53030); /* Muda o gradiente */
+    box-shadow: 0 3px 10px rgba(245, 101, 101, 0.4); /* Adiciona sombra vermelha */
+}
+
+/* ==============================
+   5. Tabelas
+   ============================== */
+
+/* Contêiner para tabelas, fornecendo fundo, sombra e rolagem */
+.table-container {
+    background: white; /* Fundo branco */
+    border-radius: 15px; /* Cantos arredondados */
+    padding: 2rem; /* Preenchimento interno */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Sombra suave */
+    overflow-x: auto; /* Adiciona rolagem horizontal se a tabela for muito larga */
+    margin-bottom: 2rem; /* Margem inferior */
+}
+
+/* Estilos para a tabela em si */
+table {
+    width: 100%; /* Ocupa 100% da largura do seu contêiner */
+    border-collapse: collapse; /* Remove o espaçamento entre as bordas das células */
+    background: white; /* Fundo branco (redundante se o contêiner já for branco, mas não faz mal) */
+}
+
+/* Estilos para células de cabeçalho (th) e células de dados (td) */
+th,
+td {
+    padding: 1rem; /* Preenchimento interno */
+    text-align: left; /* Alinha o texto à esquerda */
+    border-bottom: 1px solid #e2e8f0; /* Borda inferior fina */
+}
+
+/* Estilos específicos para células de cabeçalho */
+th {
+    background: #f7fafc; /* Fundo cinza claro */
+    font-weight: 600; /* Peso da fonte negrito */
+    color: #4a5568; /* Cor do texto */
+    border-bottom: 2px solid #e2e8f0; /* Borda inferior um pouco mais grossa */
+}
+
+/* Efeito ao passar o mouse sobre as linhas da tabela */
+tr:hover {
+    background: #f7fafc; /* Muda o fundo da linha para cinza claro */
+}
+
+/* Remove a borda inferior da última linha da tabela */
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Contêiner para botões de ação dentro das células da tabela */
+.action-buttons {
+    display: flex; /* Usa Flexbox para organizar os botões */
+    gap: 0.5rem; /* Espaçamento entre os botões */
+    flex-wrap: wrap; /* Permite que os botões quebrem a linha */
+}
+
+/* ==============================
+   6. Alertas e Mensagens
+   ============================== */
+
+/* Estilos gerais para caixas de alerta/mensagem */
+.alert {
+    padding: 1rem; /* Preenchimento interno */
+    border-radius: 8px; /* Cantos arredondados */
+    margin-bottom: 1rem; /* Margem inferior */
+    font-weight: 500; /* Peso da fonte */
+}
+
+/* Estilos para alertas de sucesso (verde) */
+.alert-success {
+    background: #c6f6d5; /* Fundo verde claro */
+    color: #22543d; /* Cor do texto verde escuro */
+    border: 1px solid #9ae6b4; /* Borda verde */
+}
+
+/* Estilos para alertas de erro (vermelho) */
+.alert-error {
+    background: #fed7d7; /* Fundo vermelho claro */
+    color: #742a2a; /* Cor do texto vermelho escuro */
+    border: 1px solid #fc8181; /* Borda vermelha */
+}
+
+/* Estilos para mensagens de erro inline (ex: validação de formulário) */
+/* ATENÇÃO: Alvo p[style*="color:red"] é frágil, prefira adicionar uma classe CSS diretamente no HTML */
+p[style*="color:red"],
+p[style*="color: red"] { /* Garante a compatibilidade */
+    background: #fed7d7; /* Fundo vermelho claro */
+    color: #742a2a; /* Cor do texto vermelho escuro */
+    padding: 0.75rem; /* Preenchimento interno */
+    border-radius: 8px; /* Cantos arredondados */
+    border: 1px solid #fc8181; /* Borda vermelha */
+    margin: 1rem 0; /* Margem superior e inferior */
+}
+
+/* ==============================
+   7. Cards de Conteúdo
+   ============================== */
+
+/* Estilos para elementos com a classe .card (contêineres com fundo, sombra e cantos arredondados) */
+.card {
+    background: white; /* Fundo branco */
+    padding: 2rem; /* Preenchimento interno */
+    border-radius: 15px; /* Cantos arredondados */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Sombra suave */
+    margin-bottom: 2rem; /* Margem inferior */
+}
+
+/* Estilos para títulos (h2) dentro de cards */
+.card h2 {
+    color: #4a5568; /* Cor do título */
+    margin-bottom: 1rem; /* Margem inferior */
+}
+
+/* ==============================
+   8. Seções de Página (Boas-Vindas, Listas, etc.)
+   ============================== */
+
+/* Estilos para seções gerais da página, como a seção de boas-vindas na página inicial */
+.section {
+    background: white; /* Fundo branco */
+    padding: 3rem 2rem; /* Preenchimento interno generoso */
+    border-radius: 15px; /* Cantos arredondados */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Sombra suave */
+    text-align: center; /* Centraliza o texto e elementos inline dentro da seção */
+    margin-bottom: 2rem; /* Margem inferior */
+
+    /* Configuração de Grid para organizar conteúdo interno (ex: cards de informação) */
+    display: grid; /* Ativa CSS Grid */
+    /* Cria colunas que se ajustam, com min. 200px e ocupando 1 fração do espaço disponível */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Max-width ajustada para 5 colunas de 200px + 4 gaps (5 * 200 + 4 * 1rem) */
+    max-width: calc(5 * 200px + 4 * 1rem); 
+    gap: 1rem; /* Espaçamento entre os itens da grade */
+    /* ATENÇÃO: Se esta seção deve ser centralizada, você pode precisar de 'margin: 2rem auto;' nela ou em seu pai */
+}
+
+/* Estilos para uma seção de lista (cópia da .section, considere consolidar ou diferenciar) */
+/* Esta regra parece ser uma duplicação da .section. Se a intenção é ter um estilo ligeiramente diferente
+   para listas vs. seções de boas-vindas, adicione propriedades distintas aqui. Caso contrário, remova ou unifique. */
+.section-lista {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-bottom: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    max-width: calc(5 * 200px + 4 * 1rem); /* Calculo corrigido para 5 colunas e 4 gaps */
+    gap: 1rem;
+}
+
+/* Estilos para títulos (h1) dentro de seções (específico para a primeira seção/welcome) */
+.section h1 {
+    color: #4a5568;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Estilos para parágrafos dentro de seções de boas-vindas */
+.welcome-section p {
+    color: #718096; /* Cor do texto cinza */
+    font-size: 1.1rem; /* Tamanho da fonte ligeiramente maior */
+}
+
+/* ==============================
+   9. Estados de Carregamento e Outros
+   ============================== */
+
+/* Estilos para elementos que indicam estado de carregamento */
+.loading {
+    text-align: center; /* Centraliza o texto */
+    padding: 2rem; /* Preenchimento */
+    color: #718096; /* Cor do texto cinza */
+}
+
+/* Estilos gerais para todos os links */
+a {
+    color: #667eea; /* Cor azul/roxo padrão */
+    text-decoration: none; /* Remove sublinhado */
+    transition: color 0.3s ease; /* Transição suave na cor */
+}
+
+/* Efeito ao passar o mouse sobre links gerais */
+a:hover {
+    color: #5a67d8; /* Cor mais escura */
+    text-decoration: underline; /* Adiciona sublinhado */
+}
+
+/* Espaçamento padrão para parágrafos */
+p {
+    margin-bottom: 1rem; /* Margem inferior */
+    color: #4a5568; /* Cor do texto */
+}
+
+/* Esconde campos de input do tipo "hidden" */
+input[type="hidden"] {
+    display: none;
+}
+
+/* Margem inferior para selects específicos (usados em formulários) */
+select[name="paciente_id"],
+select[name="medico_id"] {
+    margin-bottom: 1rem;
+}
+
+/* Estilos gerais para títulos h1, h2, h3 */
+h1, h2, h3 {
+    color: #4a5568; /* Cor padrão para todos os títulos */
+    margin-bottom: 1rem; /* Margem inferior padrão */
+}
+
+/* Tamanho de fonte específico para h1 (reforço, pois já foi definido no header h1) */
+h1 {
+    font-size: 2.5rem;
+}
+
+/* Tamanho de fonte específico para h2 */
+h2 {
+    font-size: 2rem;
+}
+
+/* Tamanho de fonte específico para h3 */
+h3 {
+    font-size: 1.5rem;
+}
+
+/* ==============================
+   10. Responsividade (Media Queries)
+   ============================== */
+
+/* Estilos aplicados quando a largura da tela é no máximo 768px (tablets e menores) */
+@media (max-width: 768px) {
+    /* Ajusta o preenchimento do contêiner */
+    .container {
+        padding: 10px;
+    }
+    
+    /* Ajusta o preenchimento do cabeçalho */
+    header {
+        padding: 1rem;
+    }
+    
+    /* Reduz o tamanho do título do cabeçalho */
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    /* Altera a navegação para empilhar itens em coluna e centralizá-los */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Altera a navegação superior (login/logout) para empilhar itens em coluna */
+    body > nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    /* Reduz o preenchimento dos formulários */
+    form {
+        padding: 1rem;
+    }
+    
+    /* Faz com que o layout de grade do formulário tenha apenas 1 coluna */
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Reduz o preenchimento do contêiner da tabela */
+    .table-container {
+        padding: 1rem;
+    }
+    
+    /* Reduz o preenchimento e o tamanho da fonte das células da tabela */
+    th, td {
+        padding: 0.5rem;
+        font-size: 0.875rem;
+    }
+    
+    /* Faz com que os botões de ação da tabela se empilhem em coluna */
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    /* Reduz o tamanho da fonte e o preenchimento dos botões de edição/exclusão */
+    .btn-edit,
+    .btn-delete {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+/* Estilos aplicados quando a largura da tela é no máximo 480px (smartphones) */
+@media (max-width: 480px) {
+    /* Reduz ainda mais o tamanho do título do cabeçalho */
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    /* Reduz o preenchimento e o tamanho da fonte dos links de navegação */
+    nav a {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+    
+    /* Reduz o preenchimento e o tamanho da fonte dos botões */
+    button,
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Reduz o tamanho da fonte da tabela */
+    table {
+        font-size: 0.8rem;
+    }
+    
+    /* Reduz o preenchimento das células da tabela */
+    th, td {
+        padding: 0.4rem;
+    }
+}
+
+/* ==============================
+   11. Animações e Acessibilidade
+   ============================== */
+
+/* Define uma animação de fade-in (aparecimento suave) */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Começa totalmente transparente */
+        transform: translateY(10px); /* Começa ligeiramente abaixo da posição final */
+    }
+    to {
+        opacity: 1; /* Termina totalmente opaco */
+        transform: translateY(0); /* Termina na posição original */
+    }
+}
+
+/* Aplica a animação fadeIn a elementos de card, formulário e contêiner de tabela */
+.card,
+form,
+.table-container {
+    animation: fadeIn 0.3s ease; /* Animação de 0.3 segundos com aceleração/desaceleração suave */
+}
+
+/* Melhora os estados de foco (outline) para elementos interativos */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus,
+a:focus { /* Adicionado 'a:focus' para links */
+    outline: 2px solid #667eea; /* Adiciona um contorno azul/roxo de 2px */
+    outline-offset: 2px; /* Afasta o contorno do elemento por 2px */
+}
+
+/* Classe para conteúdo que deve ser lido apenas por leitores de tela (screen readers) */
+.sr-only {
+    position: absolute; /* Posição absoluta para tirar do fluxo normal */
+    width: 1px; /* Largura mínima */
+    height: 1px; /* Altura mínima */
+    padding: 0;
+    margin: -1px;
+    overflow: hidden; /* Esconde qualquer conteúdo que exceda as dimensões */
+    clip: rect(0, 0, 0, 0); /* Recorta a área de visualização para ser 0 */
+    white-space: nowrap; /* Impede que o texto quebre linha */
+    border: 0; /* Remove qualquer borda */
+}
+
+/* ==============================
+   Remoções e Otimizações Finais
+   ============================== */
+
+/* A seguinte regra foi removida pois era uma duplicação da primeira .section */
+/* .section {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-bottom: 2rem;
+} */
