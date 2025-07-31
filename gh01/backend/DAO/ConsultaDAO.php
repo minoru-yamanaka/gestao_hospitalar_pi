@@ -9,7 +9,7 @@ class ConsultaDAO{
       $this->bd = Conexao::getInstance();  
     }
     public function getAll(){
-        $sql="SELECT * FROM consulta";
+        $sql="SELECT * FROM consultas";
         $consultas=[];
         $stmt= $this->bd->query($sql);
         
@@ -50,7 +50,8 @@ class ConsultaDAO{
     ]);
         }
             public function update(Consultas $consultas){
-        $sql="UPDATE consultas SET data=:,horas=:horas,especialidade=:especialidade,paciente_id=:paciente_id,medico_id=:medico_id WHERE id=:id"; 
+        $sql = "UPDATE consultas SET data = :data, horas = :horas, especialidade = :especialidade, paciente_id = :paciente_id, medico_id = :medico_id WHERE id = :id";
+        // $sql="UPDATE consultas SET data=:,horas=:horas,especialidade=:especialidade,paciente_id=:paciente_id,medico_id=:medico_id WHERE id=:id"; 
           $stmt= $this->bd->prepare($sql);
         $stmt->execute([':id'=>$consultas->getId(),
                         ':data'=>$consultas->getData(),

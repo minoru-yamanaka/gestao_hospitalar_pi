@@ -20,3 +20,29 @@ class Conexao{
 }
  //$pdo = Conexao::getInstance();
 ?>
+
+<!-- config file for database connection -->
+
+<!-- <?php
+class Conexao
+{
+    public static function getInstance(): PDO
+    {
+        $host = "localhost";
+        $bd   = "u952185621_GHPIS";
+        $user = "u952185621_minoruyamanaka";
+        $pass = "Teste#40028922";
+        $charset = "utf8";
+
+        $dsn = "mysql:host={$host};dbname={$bd};charset={$charset}";
+
+        try {
+            $pdo = new PDO($dsn, $user, $pass);
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            return $pdo;
+        } catch (PDOException $e) {
+            die("Erro na conexão com o banco de dados: " . $e->getMessage());
+        }
+    }
+}
+?> -->

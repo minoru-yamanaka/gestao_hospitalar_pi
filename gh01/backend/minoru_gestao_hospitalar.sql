@@ -3,8 +3,8 @@
 -- http://localhost/phpmyadmin/
 
 -- Criação do banco de dados
-CREATE DATABASE IF NOT EXISTS gestao_hospitalar;
-USE gestao_hospitalar;
+CREATE DATABASE IF NOT EXISTS gestao_hospitalar; -- u952185621_GHPIS
+USE gestao_hospitalar; -- u952185621_GHPIS
 
 -- Configurações iniciais
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -149,3 +149,10 @@ INSERT INTO usuario (id, nome, email, senha, token) VALUES
 (0, 'Carlos Alexandre', 'carllos3939@gmail.com', '$2y$10$m02fCR8qbpdkSO0zEsrnZeBSYn1NuJLha2TsCpYPSd20I3x/T/YWK', '19533476811494356b42fabf31ab01b724d4293eb8cd68a3f5');
 
 COMMIT;
+
+-- ============================
+-- Nome da base de dados MySQL: u952185621_GHPIS
+-- username MySQL: u952185621_minoruyamanaka
+-- Senha: Teste#40028922
+-- Criado em: 2025-07-31
+-- ============================
