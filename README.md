@@ -131,4 +131,8 @@ Este projeto foi desenvolvido por:
 * [Carlos Gonçalves](URL_DO_PERFIL_DO_CARLOS)
 
 
+## Acesso Fácil por QRCode
+
+![QRCode_Facil](/QRCode_Facil.png)
+
 
