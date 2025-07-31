@@ -3,8 +3,8 @@
 -- http://localhost/phpmyadmin/
 
 -- Criação do banco de dados
-CREATE DATABASE IF NOT EXISTS gestaodb;
-USE gestaodb;
+CREATE DATABASE IF NOT EXISTS gestao_hospitalar;
+USE gestao_hospitalar;
 
 -- Configurações iniciais
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
