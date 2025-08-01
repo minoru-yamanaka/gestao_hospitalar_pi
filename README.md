@@ -2,6 +2,9 @@
 
 Este é um projeto de um sistema de gestão hospitalar desenvolvido em PHP, que permite o gerenciamento de pacientes, médicos, convênios, consultas e endereços. O sistema possui uma interface web para interação e um banco de dados MySQL para persistência dos dados.
 
+[Veja o PDF do projeto](/GESTAO%20HOSPITALAR.pdf)
+
+
 ## Funcionalidades Principais
 
 * **Autenticação de Usuário**: Sistema seguro com funcionalidades de login, logout e cadastro de novos usuários. O acesso às funcionalidades principais é restrito a usuários autenticados.
