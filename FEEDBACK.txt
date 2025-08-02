@@ -1,19 +1,15 @@
 Documentação:  
 
 Obrigatórios: 
-    Briefing 
-
+    Briefing : Objetivo e Intrudução 
     Escopo 
         Diagrama de Classe - MER
         Regras de negócio 
-
-Extras: 
-    Objetivo e Intrudução 
-    Requisitos Funcionais 
-    Requisitos Não Funcionais 
-    Diagrama de Casos de Uso 
-    Modelo Conceitual - DER
-
+        Requisitos Funcionais 
+        Requisitos Não Funcionais 
+        Diagrama de Casos de Uso < desenho bonequinho 
+        Modelo Conceitual - DER
+        
 ---
 
 Com certeza. Com base em todos os arquivos fornecidos, preparei uma documentação completa do projeto, seguindo a estrutura solicitada.
