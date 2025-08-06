@@ -76,14 +76,33 @@ Este documento detalha a estrutura, funcionalidades e regras de negócio do **Si
 * **RNF04 - Manutenibilidade:**
     * O código deve ser organizado em camadas (Apresentação, Modelo, DAO), separando as responsabilidades para facilitar futuras manutenções.
 
-### 2.3. Regras de Negócio
 
-* **RN01:** O acesso ao sistema de gerenciamento é restrito e requer autenticação prévia.
-* **RN02:** O e-mail de um usuário deve ser único no sistema.
-* **RN03:** Todos os campos dos formulários de cadastro são, em sua maioria, obrigatórios para garantir a consistência dos dados.
-* **RN04:** Uma consulta só pode ser agendada se o paciente e o médico selecionados já existirem no banco de dados.
-* **RN05:** Um convênio ou endereço só pode ser cadastrado se estiver associado a um paciente existente.
-* **RN06:** Ao excluir um paciente, todos os seus registros associados (consultas, convênios e endereços) são automaticamente excluídos em cascata para manter a integridade do banco de dados (`ON DELETE CASCADE`).
+### 2.3. Regras de Negócio (RN)
+
+* **RN01 – O acesso ao sistema de gerenciamento é restrito e requer autenticação prévia**
+  
+   🔐 *Justificativa:* Garante que apenas usuários autorizados possam visualizar, cadastrar ou alterar informações sensíveis, assegurando confidencialidade e integridade dos dados.
+
+* **RN02 – O e-mail de um usuário deve ser único no sistema**
+  
+   📧 *Justificativa:* Evita conflitos de autenticação e garante a identificação exclusiva de cada usuário, essencial para controle de acesso e rastreabilidade.
+
+* **RN03 – Todos os campos dos formulários de cadastro são obrigatórios**
+  
+   📝 *Justificativa:* Assegura a consistência e completude dos dados, evitando registros incompletos que possam comprometer operações futuras ou relatórios gerenciais.
+
+* **RN04 – Uma consulta só pode ser agendada se o paciente e o médico já existirem no banco de dados**
+  
+   🗓️ *Justificativa:* Garante a integridade relacional dos dados e evita agendamentos inválidos ou incoerentes, vinculando apenas registros existentes.
+
+* **RN05 – Um convênio ou endereço só pode ser cadastrado se estiver associado a um paciente existente**
+  
+   📎 *Justificativa:* Evita dados órfãos no banco de dados, mantendo a coerência e rastreabilidade das informações relacionadas aos pacientes.
+
+* **RN06 – Ao excluir um paciente, todos os seus registros associados (consultas, convênios e endereços) são automaticamente excluídos (ON DELETE CASCADE)**
+  
+   🧹 *Justificativa:* Garante a limpeza automática dos dados relacionados, evitando resíduos no banco e facilitando a manutenção da integridade dos dados.
+
 
 ### 2.4. Diagrama de Casos de Uso
 
