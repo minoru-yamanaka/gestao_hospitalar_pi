@@ -26,13 +26,28 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 - Arquitetura organizada com separação de camadas (Modelo, DAO e Visão).
 
 ---
+### 🗓️ Semana 1
+- Receber feedbacks individuais do grupo
+- Alinhar e revisar toda a documentação
 
-## [1.1.0] - 2025-08-05
+---
 
-### 📌 Gestão de Projeto
-- Elaboração de documentação inicial 
--
- 
+### 🗓️ Semana 2
+- Criar o **diagrama de casos de uso (imagem)**
+- Revisar o documento por completo
+
+---
+
+### 🗓️ Semana 3
+- Revisar funcionalidades do projeto (código)
+- Ajustar e definir o layout da **Home**
+
+---
+
+### 🗓️ Semana 4
+- Elaborar a **apresentação final**
+- Fechar ajustes finais e ensaiar apresentação
+
 ---
 
 ## 📚 Histórico de Autores
