@@ -45,6 +45,8 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 ---
 
 ### 🗓️ Semana 4
+- 4/9 Aula da Luana 
+- 8/9 Apresentação 
 - Elaborar a **apresentação final**
 - Fechar ajustes finais e ensaiar apresentação
 
