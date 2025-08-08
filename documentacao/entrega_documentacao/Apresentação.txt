@@ -1,0 +1,144 @@
+Sistema de Gestão Hospitalar (SGH)
+Slide 1: Título
+Sistema de Gestão Hospitalar (SGH)
+
+Gestão de saúde eficiente e segura com controle total em suas mãos.
+
+Slide 2: Estratégia e Foco
+Visão Geral
+O SGH é uma aplicação web de acesso restrito e institucional, desenvolvida para:
+
+Informar: Centralizar dados de forma clara e acessível.
+
+Facilitar: Otimizar o gerenciamento de dados internos.
+
+Suportar: Apoiar a equipe administrativa em suas rotinas diárias.
+
+Mensagem Central
+Profissionalismo, organização e segurança da informação.
+
+Promoção
+
+Apresentações para instituições de saúde.
+
+Parcerias com entidades educacionais.
+
+Networking em tecnologia e saúde.
+
+Slide 3: O Sistema
+Personalidade
+
+Confiável
+
+Organizado
+
+Acessível
+
+Sério
+
+Ponto Forte
+
+Estrutura modular com interface simples e objetiva.
+
+Controle de acesso baseado em permissões de usuário (login).
+
+Limitações Atuais
+
+Sem acesso externo para pacientes ou médicos.
+
+Não possui integração com sistemas de terceiros.
+
+Slide 4: Público-Alvo
+Para quem?
+
+Secretários(as)
+
+Recepcionistas
+
+Administradores de clínicas e hospitais
+
+Necessidade Atendida
+Gerenciar grandes volumes de dados com agilidade, consistência e segurança, mantendo as informações da instituição sempre atualizadas através de um painel de controle centralizado.
+
+Slide 5: Funcionalidades Principais
+O sistema oferece um conjunto completo de ferramentas para a gestão diária:
+
+Autenticação: Login / Logout e controle de sessão.
+
+Cadastros:
+
+Pacientes
+
+Médicos
+
+Convênios
+
+Endereços
+
+Gerenciamento:
+
+Agendamento de Consultas
+
+Edição de todos os cadastros
+
+Slide 6: Design e Aparência
+Conceito Visual
+Interface com design limpo e intuitivo.
+
+Paleta de Cores: Tons suaves de azul, cinza e branco para transmitir calma e profissionalismo.
+
+Navegação: Menus verticais, simples e diretos.
+
+Tipografia: Fontes legíveis e layout responsivo.
+
+O que Evitar
+
+Poluição visual e excesso de informações.
+
+Menus complexos ou confusos.
+
+Sobrecarga de conteúdo técnico na interface.
+
+Slide 7: Referências e Concorrência
+Referências Visuais
+
+Pipefy: Pela interface intuitiva e fluida.
+
+TOTVS: Pela clareza na apresentação de soluções.
+
+Principais Concorrentes
+
+MedWare
+
+iClinic
+
+MV Sistemas
+
+Desafios
+
+Concorrentes já possuem integração com redes de saúde.
+
+Experiência consolidada no mercado.
+
+Slide 8: Diretrizes e Próximos Passos
+Princípios Fundamentais
+
+Originalidade: Não copiar estruturas ou nomenclaturas de concorrentes.
+
+Segurança: Garantir que nenhum dado sensível seja exposto.
+
+Confiabilidade: Evitar vulnerabilidades técnicas que comprometam o sistema.
+
+Próximos Passos
+
+Desenvolvimento da interface com base no design definido.
+
+Inclusão de imagens, ícones e outros elementos visuais.
+
+Testes de usabilidade com o público-alvo.
+
+Slide 9: Obrigado e Contato
+Obrigado!
+Dúvidas ou próximos passos?
+
+Gestão de saúde eficiente e segura com controle total em suas mãos.
