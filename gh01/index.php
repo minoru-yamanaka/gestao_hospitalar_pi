@@ -84,10 +84,6 @@ $isLogged = isset($_SESSION['token']);
                             <br>
 
                     <!-- mensagem  -->
-
-
-
-
                 </div>
   
         
@@ -140,9 +136,6 @@ $isLogged = isset($_SESSION['token']);
                             <hr> 
                                 <p class="footer-text">&copy; 2025 Sistema de Gestão Hospitalar. Todos os direitos reservados.</p>
                         </div>
-
-
-
                 </div>
       
 </body>
