@@ -27,12 +27,7 @@ $isLogged = isset($_SESSION['token']);
                                 <button class="tab-button" onclick="window.location.href='index.php';">
                                     👥 Home
                                 </button>
-                                <!-- <button class="tab-button" onclick="window.location.href='./frontend/login.php';">
-                                    📦 Fazer login
-                                </button>
-                                <button class="tab-button" onclick="window.location.href='./frontend/cadastro.php';">
-                                    📦 Criar conta
-                                </button> -->
+            
                                 <button class="tab-button" onclick="window.location.href='./frontend/logout.php';">
                                     📦 Sair
                                 </button>
@@ -122,11 +117,16 @@ $isLogged = isset($_SESSION['token']);
                     </div>
 
                     <div class="header">
-                        <h2>Bem-vindo(a) ao Sistema de Gestão AMD Hospitalar</h2>
-                        <br>
+                    <!-- mensagem  -->
+                    <h2>Bem-vindo(a) ao Sistema de Gestão AMD Hospitalar</h2>
+                            <br>
                         <p>
                             Nossa plataforma foi criada para simplificar a gestão de hospitais, clínicas e consultórios. Popular por ser altamente personalizável e modular, ela se adapta perfeitamente às suas necessidades, provando que um sistema poderoso também pode ser intuitivo. Nossa filosofia é: <strong>Dispensa manual, pois até quem nunca viu, já sabe como funciona.</strong>
-                        </p> 
+                        </p>
+                            <br>
+                                <hr>
+                            <br>
+
                     </div>
 
                     <?php endif; ?>
