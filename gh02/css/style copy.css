@@ -1,0 +1,504 @@
+/*
+ * CSS para Sistema Hospitalar
+ * Versão Otimizada
+ *
+ * Certifique-se de que este arquivo esteja em: css/estilo.css
+ * Adicione aos seus arquivos PHP: <link rel="stylesheet" href="css/estilo.css">
+ */
+
+/* --- Reset e Configurações Globais --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+    line-height: 1.6;
+
+
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+
+    
+}
+
+/* --- Títulos --- */
+h1, h2, h3 {
+    color: #4a5568;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+/* --- Parágrafos --- */
+p {
+    margin-bottom: 1rem;
+    color: #4a5568;
+}
+
+/* --- Links Gerais --- */
+a {
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #5a67d8;
+    text-decoration: underline;
+}
+
+/* --- Header e Navegação Principal --- */
+header {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    text-align: center; /* Centraliza o H1 do header */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* --- Navegação Principal (Menus) --- */
+nav ul {
+    list-style: none; /* Remove marcadores de lista */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+    padding-left: 0; /* Garante que o padding padrão de UL seja removido */
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+nav a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    background: linear-gradient(135deg, #5a67d8, #6b46c1);
+}
+
+/* --- Navegação Superior (Login/Logout) --- */
+/* Aplica-se à navegação que é filha direta do body */
+body > nav {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 0 0 15px 15px;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+body > nav a {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+/* --- Formulários --- */
+form {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.form-group { /* Removido 'div' para não afetar todas as divs indiscriminadamente */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+label {
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+select,
+textarea {
+    padding: 0.75rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    background: white;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* --- Botões --- */
+button,
+.btn {
+    display: inline-flex; /* Usar inline-flex para centralizar e permitir gap, mas manter como bloco */
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    margin: 0.5rem 0; /* Espaçamento padrão para botões */
+}
+
+button:hover,
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    background: linear-gradient(135deg, #5a67d8, #6b46c1);
+}
+
+button[type="submit"],
+.btn-primary { /* Adicionei uma classe genérica para submit */
+    background: linear-gradient(135deg, #48bb78, #38a169);
+}
+
+button[type="submit"]:hover,
+.btn-primary:hover {
+    background: linear-gradient(135deg, #38a169, #2f855a);
+    box-shadow: 0 5px 15px rgba(72, 187, 120, 0.4);
+}
+
+/* --- Botões de Ação Específicos --- */
+.btn-edit {
+    background: linear-gradient(135deg, #ed8936, #dd6b20);
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+.btn-delete {
+    background: linear-gradient(135deg, #f56565, #e53e3e);
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+.btn-edit:hover {
+    background: linear-gradient(135deg, #dd6b20, #c05621);
+    box-shadow: 0 3px 10px rgba(237, 137, 54, 0.4);
+}
+
+.btn-delete:hover {
+    background: linear-gradient(135deg, #e53e3e, #c53030);
+    box-shadow: 0 3px 10px rgba(245, 101, 101, 0.4);
+}
+
+/* --- Tabelas --- */
+.table-container {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    overflow-x: auto; /* Permite rolagem horizontal em telas pequenas */
+    margin-bottom: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th,
+td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+    background: #f7fafc;
+    font-weight: 600;
+    color: #4a5568;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+tr:hover {
+    background: #f7fafc;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Ações da tabela */
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* --- Alertas e Mensagens --- */
+.alert {
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.alert-success {
+    background: #c6f6d5;
+    color: #22543d;
+    border: 1px solid #9ae6b4;
+}
+
+.alert-error {
+    background: #fed7d7;
+    color: #742a2a;
+    border: 1px solid #fc8181;
+}
+
+/* Mensagens de erro inline (ex: validação de formulário) */
+p[style*="color:red"],
+p[style*="color: red"] { /* Garante a compatibilidade */
+    background: #fed7d7;
+    color: #742a2a;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #fc8181;
+    margin: 1rem 0;
+}
+
+/* --- Cards de Conteúdo --- */
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.card h2 {
+    color: #4a5568;
+    margin-bottom: 1rem;
+}
+
+/* --- Página Inicial - Seção de Boas-Vindas / Cards Gerais --- */
+.section {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-bottom: 2rem;
+    /* Remover grid template aqui se for apenas para o welcome-section,
+       caso contrário, .section pode ser um container flex/grid para outros cards.
+       Mantido como grid para o welcome-section como no original. */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    justify-content: center; /* Centraliza itens no grid */
+    align-items: center;
+}
+
+.welcome-section h1 { /* Específico para o título de boas-vindas */
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #4a5568;
+}
+
+.welcome-section p {
+    color: #718096;
+    font-size: 1.1rem;
+}
+
+/* --- Estados de Carregamento --- */
+.loading {
+    text-align: center;
+    padding: 2rem;
+    color: #718096;
+}
+
+/* --- Elementos Escondidos --- */
+input[type="hidden"] {
+    display: none;
+}
+
+/* --- Select Dropdowns Específicos (para formulários de cadastro) --- */
+select[name="paciente_id"],
+select[name="medico_id"] {
+    margin-bottom: 1rem;
+}
+
+/* --- Animações --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card,
+form,
+.table-container {
+    animation: fadeIn 0.3s ease;
+}
+
+/* --- Melhorias de Acessibilidade --- */
+/* Foco visual claro para elementos interativos */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus,
+a:focus { /* Adicionado 'a:focus' para links */
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+/* Conteúdo somente para leitores de tela */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    header {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body > nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    form {
+        padding: 1rem;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    .table-container {
+        padding: 1rem;
+    }
+
+    th, td {
+        padding: 0.5rem;
+        font-size: 0.875rem;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .btn-edit,
+    .btn-delete {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav a {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    button,
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    th, td {
+        padding: 0.4rem;
+    }
+}
+
+main {
+    
+}

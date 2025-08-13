@@ -8,7 +8,8 @@ $isLogged = isset($_SESSION['token']);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Gestão Hospitalar</title>
+    <!-- <title>Gestão Hospitalar</title> -->
+    <title>01</title>
 
     <style>
         .main-content { /* Adicionado para encapsular a área do usuário logado */

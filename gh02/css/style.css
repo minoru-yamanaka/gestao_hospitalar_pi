@@ -1,0 +1,421 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.header h1 {
+    color: #4a5568;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.header p {
+    color: #718096;
+    font-size: 1.1rem;
+}
+
+.tabs {
+    display: flex;
+    background: white;
+    border-radius: 15px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    gap: 0.5rem;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 1rem 2rem;
+    background: transparent;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    color: #4a5568;
+}
+
+.tab-button.active {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.tab-content {
+    display: none;
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select {
+    padding: 0.75rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #48bb78, #38a169);
+    color: white;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #f56565, #e53e3e);
+    color: white;
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, #ed8936, #dd6b20);
+    color: white;
+}
+
+.btn-secondary {
+    background: #e2e8f0;
+    color: #4a5568;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.table-container {
+    overflow-x: auto;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+    background: #f7fafc;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+tr:hover {
+    background: #f7fafc;
+}
+
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.status-ativo {
+    background: #c6f6d5;
+    color: #22543d;
+}
+
+.status-inativo {
+    background: #fed7d7;
+    color: #742a2a;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #718096;
+  white-space: normal;      /* Permite quebra de linha */
+  word-break: break-word;   /* Quebra palavras longas */
+}
+
+
+.alert {
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.alert-success {
+    background: #c6f6d5;
+    color: #22543d;
+    border: 1px solid #9ae6b4;
+}
+
+.alert-error {
+    background: #fed7d7;
+    color: #742a2a;
+    border: 1px solid #fc8181;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #718096;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .tabs {
+        flex-direction: column;
+    }
+    
+    .actions {
+        flex-direction: column;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+    }  
+}
+
+/* Estilos para o container do formulário */
+.tab-content form {
+    background-color: #ffffff; /* Fundo branco para o formulário */
+    padding: 2rem; /* Espaçamento interno */
+    border-radius: 15px; /* Cantos arredondados */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+/* Estilos para os divs que agrupam label e input */
+.tab-content form div {
+    margin-bottom: 1rem; /* Espaçamento entre os grupos de campos */
+}
+
+/* Estilos para as labels (rótulos) */
+.tab-content form label {
+    display: block; /* Faz com que a label ocupe sua própria linha */
+    margin-bottom: 0.5rem; /* Espaçamento entre a label e o input */
+    font-weight: 600; /* Texto mais forte */
+    color: #4a5568; /* Cor do texto */
+}
+
+/* Estilos para os campos de texto e data */
+.tab-content form input[type="text"],
+.tab-content form input[type="number"],
+.tab-content form input[type="password"],
+.tab-content form input[type="mail"],
+.tab-content form input[type="date"] {
+    width: 100%; /* Ocupa a largura total do container */
+    padding: 0.75rem; /* Espaçamento interno */
+    border: 2px solid #e2e8f0; /* Borda padrão */
+    border-radius: 8px; /* Cantos arredondados */
+    font-size: 1rem; /* Tamanho da fonte */
+    transition: border-color 0.3s ease; /* Transição suave para a borda */
+}
+
+select {
+        width: 100%; /* Ocupa a largura total do container */
+    padding: 0.75rem; /* Espaçamento interno */
+    border: 2px solid #e2e8f0; /* Borda padrão */
+    border-radius: 8px; /* Cantos arredondados */
+    font-size: 1rem; /* Tamanho da fonte */
+    transition: border-color 0.3s ease; /* Transição suave para a borda */
+}
+
+/* Estilos para os campos de texto e data quando estão em foco */
+.tab-content form input[type="text"]:focus,
+.tab-content form input[type="date"]:focus {
+    outline: none; /* Remove o contorno padrão do navegador */
+    border-color: #667eea; /* Cor da borda ao focar */
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1); /* Sombra suave ao focar */
+}
+
+/* Estilos para o botão de submit */
+.tab-content form button[type="submit"] {
+    width: auto; /* A largura se ajusta ao conteúdo do botão */
+    padding: 0.75rem 1.5rem; /* Espaçamento interno */
+    border: none; /* Remove a borda */
+    border-radius: 8px; /* Cantos arredondados */
+    font-size: 1rem; /* Tamanho da fonte */
+    font-weight: 600; /* Texto mais forte */
+    cursor: pointer; /* Ícone de ponteiro ao passar o mouse */
+    transition: all 0.3s ease; /* Transição suave para efeitos de hover */
+    background: linear-gradient(135deg, #667eea, #764ba2); /* Fundo com gradiente */
+    color: white; /* Cor do texto */
+    margin-top: 1.5rem; /* Espaço acima do botão */
+}
+
+/* Efeito hover para o botão de submit */
+.tab-content form button[type="submit"]:hover {
+    transform: translateY(-2px); /* Efeito de levantar */
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4); /* Sombra mais intensa */
+}
+
+/* Estilos para o parágrafo de "Já cadastrou o paciente?" */
+.tab-content form p {
+    margin-top: 1rem; /* Espaço acima do parágrafo */
+    color: #718096; /* Cor do texto */
+    font-size: 0.9rem; /* Tamanho da fonte */
+}
+
+/* Estilos para os links dentro do parágrafo */
+.tab-content form p a {
+    color: #667eea; /* Cor do link */
+    text-decoration: none; /* Remove sublinhado padrão */
+    font-weight: 500; /* Peso da fonte */
+}
+
+/* Efeito hover para os links */
+.tab-content form p a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Estilos específicos para o container de sexo */
+.sexo-container {
+    text-align: left;
+    margin-bottom: 1em;
+}
+
+/* Estilos para o grupo de radio buttons */
+.radio-group {
+    display: inline-block; /* Mantém os radio buttons na mesma linha */
+}
+

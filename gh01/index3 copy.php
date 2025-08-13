@@ -121,9 +121,7 @@ $isLogged = isset($_SESSION['token']);
                 </div>
             </div>
 
-        <?php endif; ?>
-
-        <!-- Carrossel único para ambos -->
+                <!-- Carrossel único para ambos -->
         <div class="carousel-container">
             <input type="radio" name="slider" id="slide1" checked>
             <input type="radio" name="slider" id="slide2">
@@ -168,6 +166,10 @@ $isLogged = isset($_SESSION['token']);
                 <label for="slide4"></label>
             </div>
         </div>
+
+        <?php endif; ?>
+
+
 
         <!-- Footer único para ambos -->
         <footer class="tabs" style="margin-top: 15px; border-top: 1px solid #eee; padding-top: 20px; text-align: center;">
