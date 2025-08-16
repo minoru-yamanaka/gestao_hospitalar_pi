@@ -140,7 +140,7 @@ function getAnswer(question) {
         }).catch(error => {
             console.error("Erro ao buscar resposta:", error);
             isAnswerLoading = false;
-            addAnswerSection("Oh, parece que minha magia está fraca no momento. Poderia tentar novamente mais tarde? ✨");
+            addAnswerSection("Estou com dificuldades de conexão no momento. Tente novamente em breve. ✨");
         }).finally(() => {
             scrollToBottom(); // Faz a tela rolar para a última mensagem
             sendButton.classList.remove('send-button-nonactive'); // Ativa o botão novamente
