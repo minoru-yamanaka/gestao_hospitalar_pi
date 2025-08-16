@@ -57,7 +57,7 @@ if ($_POST) {
 
         <div class="tabs">
             <button class="tab-button" onclick="window.location.href='../index.php';">
-                👥 Home
+                👥 Início
             </button>
             <button class="tab-button" onclick="window.location.href='lista_paciente.php';">
                 📦 Paciente
@@ -130,7 +130,7 @@ if ($_POST) {
 
                 <button type="submit"><?= $pacientes ? 'Atualizar' : 'Cadastrar' ?></button>
                 <br>
-                <p>Já cadastrou o paciente? <a href="lista_paciente.php">Acesse a lista de pacientes </a> ou volte para <a href="../index.php">Home</a> </p>
+                <p>Já cadastrou o paciente? <a href="lista_paciente.php">Acesse a lista de pacientes </a> ou volte para o <a href="../index.php">início</a> </p>
             </form> 
         </div>
     </div>

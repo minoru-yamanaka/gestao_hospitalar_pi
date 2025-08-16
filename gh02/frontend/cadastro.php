@@ -92,7 +92,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <?php if(isset($erro)) echo "<p style='color: red'>$erro</p>";?>
                 <button type="submit">Cadastrar</button>
                 <br>
-                <p>Já tem uma conta? <a href="login.php">Faça Login</a> ou volte para <a href="../index.php">Home</a> </p>
+                <p>Já tem uma conta? <a href="login.php">Entrar</a> ou <a href="../index.php">volte para o início</a></p>
+
             </form>
         </div>
     </div>

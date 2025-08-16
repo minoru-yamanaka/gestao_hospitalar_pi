@@ -318,7 +318,7 @@ $isLogged = isset($_SESSION['token']);
     
 
 
-    <a href="/sua-pagina-de-chat.html" class="chat-button" role="button">
+    <a href="chat/chat.html" class="chat-button" role="button">
     💬 Posso ajudar?
     </a>
     

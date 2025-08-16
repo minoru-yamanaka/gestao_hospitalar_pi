@@ -24,7 +24,7 @@ $consultas = $dao->getAll();
 
         <div class="tabs">
             <button class="tab-button" onclick="window.location.href='../index.php';">
-                👥 Home
+                👥 Início
             </button>
             <button class="tab-button" onclick="window.location.href='lista_paciente.php';">
                 📦 Paciente
@@ -90,7 +90,7 @@ $consultas = $dao->getAll();
                         <tr>
                             <td colspan="6" class="loading"> 
                                 <p>
-                                    Visualize e gerencie as consultas cadastradas no sistema, ou <a href="#topo">volte para o topo</a> ou <a href="../index.php">volte para Home</a>
+                                    Visualize e gerencie as consultas cadastradas no sistema, ou <a href="#topo">volte para o topo</a> ou <a href="../index.php">volte para o início</a>
                                 </p>
                             </td>
                         </tr>

@@ -61,7 +61,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
         <div class="tab-content active">
                 <form action="login.php"  method="post">
                     <h1>Sistema de Gestão Hospitalar</h1>
-                    <h2 class="">Faça seu Login no Sistema de Gestão Hospitalar</h2>
+                    <h2>Faça seu Login no Sistema de Gestão Hospitalar</h2>
                     <p>Preencha seus dados de Acesso:<p>
                         <div>
                             <label for="email">Email :</label>
@@ -73,7 +73,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
                         </div>
                             <?php if(isset($erro)) echo "<p style='color:red'>$erro</p>";?>
                             <button type="submit">Logar</button>
-                            <p>Não tem uma conta? <a href="cadastro.php">Cadastre-se</a> ou volte para <a href="../index.php">Home</a> </p>
+                            <p>Não tem uma conta? <a href="cadastro.php">Cadastre-se</a> ou volte para o <a href="../index.php">início</a> </p>
                         <br>
                 </form> 
         </div>

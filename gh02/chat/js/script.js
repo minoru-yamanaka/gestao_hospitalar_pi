@@ -6,38 +6,40 @@ const API_KEY = 'sk-or-v1-ab62c7daea796f82fdf8627d347f68ed7b032258b0208a0070ea89
 // Dicionário de respostas predefinidas
 const respostasPredefinidas = {
     // Saudações e apresentação
-    "me fale sobre você": "Olá! Sou o Espelho Mágico, criado pelos talentosos alunos da turma TII09 no Senac Tito, como parte de um projeto proposto pela professora Luana Melo. Estou aqui para ajudar! Em que posso te auxiliar ?",
-    "olá": "Olá! Sou o Espelho Mágico. Em que posso ajudar hoje?",
-    "oi": "Olá! Sou o Espelho Mágico. Em que posso ajudar hoje?",
-    "bom dia": "Bom dia! O Espelho Mágico está aqui para responder suas perguntas!",
-    "boa tarde": "Boa tarde! O Espelho Mágico está aqui para responder suas perguntas!",
-    "boa noite": "Boa noite! O Espelho Mágico está aqui para responder suas perguntas!",
-    "quem é você": "Sou o Espelho Mágico, seu assistente virtual encantado! Posso responder perguntas e ajudar com informações.",
-    "como você funciona": "Funciono com magia e tecnologia! Tenho algumas respostas predefinidas e, quando não sei algo, busco conhecimento em uma inteligência artificial poderosa.",
-    
-    // Perguntas divertidas de espelho mágico
-    "espelho espelho meu": "Diga-me o que deseja saber e responderei com sinceridade mágica!",
-    "quem é a mais bela": "A beleza está nos olhos de quem vê, mas você certamente tem um lugar especial no reino da beleza!",
-    "o que você vê": "Vejo alguém com grande potencial diante de mim, buscando respostas através da magia da tecnologia!",
-    
+    "me fale sobre você": "Olá! Sou o Vita, seu assistente de gestão hospitalar. Fui desenvolvido para apoiar a equipe de saúde na organização de dados, otimização de processos e melhoria na rotina hospitalar. Como posso ajudar hoje?",
+    "olá": "Olá! Sou o Vita, pronto para auxiliar na gestão hospitalar. Em que posso ajudar?",
+    "oi": "Oi! Aqui é o Vita, seu assistente de apoio à saúde. O que posso fazer por você?",
+    "bom dia": "Bom dia! Vita à disposição para ajudar a tornar o seu dia no hospital mais produtivo. 🚀",
+    "boa tarde": "Boa tarde! Conte comigo para agilizar os processos hospitalares. 🏥",
+    "boa noite": "Boa noite! Estou aqui caso precise de suporte na gestão hospitalar. 🌙",
+    "quem é você": "Sou o Vita, um assistente virtual desenvolvido para ajudar hospitais a funcionarem de forma mais eficiente, liberando tempo para que os profissionais de saúde foquem no cuidado com os pacientes. ❤️",
+    "como você funciona": "Funciono com tecnologia avançada e inteligência artificial. Tenho respostas programadas e também posso buscar informações mais complexas quando necessário. Estou aqui para facilitar o dia a dia hospitalar.",
+
+    // Perguntas voltadas ao tema
+    "qual sua função": "Minha missão é apoiar a equipe hospitalar em tarefas como organização de informações, triagem de dados, e automação de processos administrativos.",
+    "você pode me ajudar com a gestão de pacientes?": "Sim! Posso auxiliar na organização de prontuários, agendamentos, registros de atendimento e outras rotinas relacionadas aos pacientes.",
+    "você pode otimizar processos?": "Claro! Minha função é justamente identificar gargalos e sugerir melhorias que tornem os fluxos hospitalares mais ágeis e eficientes.",
+    "você ajuda médicos e enfermeiros?": "Sim, apoio todos os profissionais de saúde, liberando tempo e reduzindo tarefas administrativas repetitivas para que possam focar no atendimento aos pacientes.",
+
     // Informações sobre o projeto
-    "como foi criado": "Fui criado com HTML, CSS e JavaScript, com a capacidade de me conectar à API DeepSeek para respostas que não conheço previamente.",
-    "quem te criou": "Fui criado por um desenvolvedor que desejava unir magia e tecnologia em um assistente virtual encantado!",
-    
-    // Humor e diversão
-    "conte uma piada": "Por que o espelho foi ao psicólogo? Porque estava tendo uma crise de reflexão! 😂",
-    "me faça rir": "Sabe por que os espelhos nunca têm fome? Porque eles já estão cheios... de reflexões! ✨😄",
-    
+    "como foi criado": "Fui desenvolvido com tecnologias como HTML, CSS, JavaScript e APIs inteligentes, com foco em soluções para o ambiente hospitalar.",
+    "quem te criou": "Fui criado por uma equipe dedicada a transformar a rotina hospitalar com tecnologia. O objetivo é facilitar a gestão e melhorar o cuidado com os pacientes.",
+
+    // Humor leve e temático
+    "conte uma piada": "Por que o prontuário foi ao médico? Porque ele estava se sentindo incompleto! 😄",
+    "me faça rir": "Sabe o que um bisturi disse para o outro? 'Corta essa!' 😂",
+
     // Agradecimentos
-    "obrigado": "Por nada! É sempre um prazer ajudar com um toque de magia! ✨",
-    "obrigada": "Por nada! É sempre um prazer ajudar com um toque de magia! ✨",
-    "valeu": "Disponha! Estou sempre aqui quando precisar de um conselho mágico! ✨",
-    
+    "obrigado": "Disponha! Estou sempre por aqui para ajudar a melhorar o cuidado com seus pacientes. ❤️",
+    "obrigada": "Imagina! O Vita está sempre pronto para apoiar na gestão hospitalar. 🏥",
+    "valeu": "Conte comigo sempre que precisar agilizar algo no hospital. Estou por aqui! 🚑",
+
     // Despedidas
-    "tchau": "Até logo! Volte sempre que precisar de um pouco de magia! ✨",
-    "adeus": "Até breve! O Espelho Mágico estará aqui quando voltar! ✨",
-    "até mais": "Até a próxima consulta mágica! ✨"
+    "tchau": "Até logo! Que seu dia seja leve e produtivo. 🌟",
+    "adeus": "Até breve! O Vita estará por aqui quando você precisar. 💼",
+    "até mais": "Até a próxima! Estarei pronto para ajudar quando precisar. 🤖"
 };
+
 
 // Captura os elementos do HTML pelo ID
 const content = document.getElementById('content'); // Área onde as mensagens serão exibidas

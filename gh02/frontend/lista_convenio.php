@@ -24,7 +24,7 @@ $convenios = $dao->getAll();
 
         <div class="tabs">
             <button class="tab-button" onclick="window.location.href='../index.php';">
-                👥 Home
+                👥 Início
             </button>
             <button class="tab-button" onclick="window.location.href='lista_paciente.php';">
                 📦 Paciente
@@ -91,7 +91,7 @@ $convenios = $dao->getAll();
                         <tr>
                             <td colspan="6" class="loading"> 
                                 <p>
-                                    Visualize e gerencie os convênios cadastrados no sistema, ou <a href="#topo">volte para o topo</a> ou <a href="../index.php">volte para Home</a>
+                                    Visualize e gerencie os convênios cadastrados no sistema, ou <a href="#topo">volte para o topo</a> ou <a href="../index.php">volte para o início</a>
                                 </p>
                             </td>
                         </tr>

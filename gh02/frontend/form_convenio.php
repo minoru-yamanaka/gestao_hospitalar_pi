@@ -51,7 +51,7 @@ exit;
 
         <div class="tabs">
             <button class="tab-button" onclick="window.location.href='../index.php';">
-                👥 Home
+                👥 Início
             </button>
             <button class="tab-button" onclick="window.location.href='lista_paciente.php';">
                 📦 Paciente
@@ -126,7 +126,7 @@ exit;
                         <button type="submit">Cadastrar</button>
                         </form>   
                         <br>
-                        <p>Já cadastrou o convênio? <a href="lista_paciente.php">Acesse a lista de convênios </a> ou volte para <a href="../index.php">Home</a> </p>
+                        <p>Já cadastrou o convênio? <a href="lista_paciente.php">Acesse a lista de convênios </a> ou volte para o <a href="../index.php">início</a> </p>
             </form> 
         </div>
     </div>
