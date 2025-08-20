@@ -27,24 +27,26 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 
 ---
 ### 🗓️ Semana 1
+- Documentação - Minoru Entregou 
 - Receber feedbacks individuais do grupo
-- Alinhar e revisar toda a documentação
+
 
 ---
 
 ### 🗓️ Semana 2
 - Criar o **diagrama de casos de uso (imagem)**
-- Revisar o documento por completo
-
----
-
-### 🗓️ Semana 3
+- Revisar o documento por completo - Carlos e Luciamara
 - Revisar funcionalidades do projeto (código)
-- Ajustar e definir o layout da **Home**
+- Ajustar o layout da **Home** - Minoru 
 
 ---
 
-### 🗓️ Semana 4
+### 🗓️ Semana 3 - 
+- Alinhar e revisar toda a documentação - Lucimara 
+
+---
+
+### 🗓️ Semana 4 - vai acontecer 
 - 4/9 Aula da Luana 
 - 8/9 Apresentação 
 - Elaborar a **apresentação final**
@@ -57,3 +59,10 @@ O formato deste arquivo é baseado no [Keep a Changelog](https://keepachangelog.
 - Minoru Yamanaka  
 - Lucimara Dias  
 - Carlos Gonçalves
+
+---
+
+- interface 
+- brecha de mercado 
+    dor trazer solução 
+- Apresentação 
