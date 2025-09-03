@@ -18,3 +18,10 @@ class Conexao{
 // $pdo = Conexao::getInstance();
 ?>
 
+<!--  
+
+
+
+
+
+-->
