@@ -64,8 +64,8 @@ align-items: center;
 
         <div class="tab-content active">
                 <form action="login.php"  method="post">
-                    <h1>Sistema de Gestão Hospitalar</h1>
-                    <h2>Faça seu Login no Sistema de Gestão Hospitalar</h2>
+                    <h1>MedSync - Sistema de Gestão Hospitalar</h1>
+                    <p>Gestão inteligente para hospitais eficiêntes</p>
                     <p>Preencha seus dados de Acesso:<p>
                         <div>
                             <label for="email">Email :</label>
@@ -76,7 +76,7 @@ align-items: center;
                             <input type="password" name="senha" id="senha">
                         </div>
                             <?php if(isset($erro)) echo "<p style='color:red'>$erro</p>";?>
-                            <button type="submit">Logar</button>
+                            <button type="submit">Entrar</button>
                             <p>Não tem uma conta? <a href="cadastro.php">Cadastre-se</a> ou volte para o <a href="../index.php">início</a> </p>
                         <br>
                 </form> 

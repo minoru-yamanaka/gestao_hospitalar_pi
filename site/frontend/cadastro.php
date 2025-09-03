@@ -73,8 +73,8 @@ align-items: center;
             
             <form method="POST">
             <form action="" method="post"> 
-                <h1>Sistema de Gestão Hospitalar</h1>
-                <h2>Faça seu cadastro no Sistema de Gestão Hospitalar</h2>
+                <h1>MedSync - Sistema de Gestão Hospitalar</h1>
+                <p>Gestão inteligente para hospitais eficiêntes</p>
                 <p>Preencha seus dados de Acesso:</p>
                 <br>
                 <div>

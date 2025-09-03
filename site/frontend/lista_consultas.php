@@ -11,14 +11,14 @@ $consultas = $dao->getAll();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Consutas</title>
+    <title>Lista de Consultas</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
         <div class="container" id="topo">
         <div class="header">
-            <h1>Sistema de Gestão Hospitalar</h1>
+            <h1>MedSync - Sistema de Gestão Hospitalar</h1>
             <!-- <p>Gerencie Pacientes de forma eficiente</p> -->
         </div>
 
@@ -45,7 +45,7 @@ $consultas = $dao->getAll();
 
         <!-- Tab Clientes -->
         <div id="clientes" class="tab-content active">
-            <h2>Gerenciar Conultas</h2>
+            <h2>Gerenciar Consultas</h2>
             <br>
             <div class="actions">
                 <button class="btn btn-primary" onclick="window.location.href='form_consultas.php';">

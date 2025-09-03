@@ -49,7 +49,8 @@ exit;
 <body>
     <div class="container">
         <div class="header">
-            <h1>Sistema de Gestão Hospitalar</h1>
+            <h1>MedSync - Sistema de Gestão Hospitalar</h1>
+            
             </div>
                 <div class="tabs">
                     <button class="tab-button" onclick="window.location.href='../index.php';">

@@ -19,7 +19,7 @@ $pacientes = $dao->getAll();
     
  <div class="container">
         <div class="header" id="topo">
-            <h1>Sistema de Gestão Hospitalar</h1>
+            <h1>MedSync - Sistema de Gestão Hospitalar</h1>
             <!-- <p>Gerencie Pacientes de forma eficiente</p> -->
         </div>
 

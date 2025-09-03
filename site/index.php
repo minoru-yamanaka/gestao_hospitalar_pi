@@ -114,8 +114,8 @@ $isLogged = isset($_SESSION['token']);
         <?php if ($isLogged): ?>
             <div class="main-content">
                 <div class="header" style="text-align: center;">
-                    <h1>Sistema de Gestão Hospitalar</h1>
-                    <p>Gerencie Pacientes de forma eficiente</p>
+                    <h1>MedSync - Sistema de Gestão Hospitalar</h1>
+                    <h2>Gestão inteligente para hospitais eficientes</h2>
                     <h3>Acesso de administrador</h3>
                     <p>Você está logado para acessar o sistema.</p>
                 </div>
@@ -202,13 +202,13 @@ $isLogged = isset($_SESSION['token']);
         <!-- PAGE | HOME LOGADOS  -->
         <?php else: ?>
             <div class="header" style="text-align: center;">
-                <h1>Sistema de Gestão Hospitalar</h1>
-                <p>Gerencie Pacientes de forma eficiente</p>
+                <h1>MedSync - Sistema de Gestão Hospitalar</h1>
+                <h2>Gestão inteligente para hospitais eficientes</h2>
                 <h3>Acesso Restrito</h3>
                 <p>Você precisa estar logado para acessar o sistema.</p>
                 <br>
                 <div style="padding-top:10px">
-                    <button class="tab-button" onclick="location.href='./frontend/login.php';">📦 Fazer login</button>
+                    <button class="tab-button" onclick="location.href='./frontend/login.php';">📦 Entrar</button>
                     <button class="tab-button" onclick="location.href='./frontend/cadastro.php';">📦 Criar conta</button>
                 </div>
             </div>
