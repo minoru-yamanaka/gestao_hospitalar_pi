@@ -195,21 +195,8 @@ $isLogged = isset($_SESSION['token']);
                             <br><br>
                             Explore, utilize e sinta-se em casa. Estamos apenas começando!
                         </p>
-                            <br>
-                                <hr>
-                            <br>
-
-                    <!-- mensagem  02 -->
-                    <h2>Que bom ter você de volta à Gestão AMD Hospitalar!</h2>
-                            <br>
-                        <p>
-                                Estamos sempre trabalhando para aprimorar sua experiência. Por isso, fique à vontade para explorar todas as ferramentas. Caso tenha alguma ideia nova ou precise de suporte, não hesite em nos contatar. Estamos aqui para ajudar!
-                        </p>
-                            <br>
-                                <!-- <hr> -->
-                            <br>
-
-                    <!--add  mensagem  -->
+                           
+                    
             </div>
 
         <!-- PAGE | HOME LOGADOS  -->
@@ -220,7 +207,7 @@ $isLogged = isset($_SESSION['token']);
                 <h3>Acesso Restrito</h3>
                 <p>Você precisa estar logado para acessar o sistema.</p>
                 <br>
-                <div>
+                <div style="padding-top:10px">
                     <button class="tab-button" onclick="location.href='./frontend/login.php';">📦 Fazer login</button>
                     <button class="tab-button" onclick="location.href='./frontend/cadastro.php';">📦 Criar conta</button>
                 </div>
@@ -273,9 +260,9 @@ $isLogged = isset($_SESSION['token']);
         </div>
 <br>
         <!-- mensagens para home | não logados  -->
-        <div class="header">
+        <!-- <div class="header">
 
-                    <!-- mensagem  01 -->
+                    
                     <h2>É com grande alegria que lançamos a Gestão AMD Hospitalar!</h2>
                             <br>
                         <p>
@@ -289,18 +276,17 @@ $isLogged = isset($_SESSION['token']);
                                 <hr>
                             <br>
 
-                    <!-- mensagem  02 -->
                     <h2>Que bom ter você de volta à Gestão AMD Hospitalar!</h2>
                             <br>
                         <p>
                                 Estamos sempre trabalhando para aprimorar sua experiência. Por isso, fique à vontade para explorar todas as ferramentas. Caso tenha alguma ideia nova ou precise de suporte, não hesite em nos contatar. Estamos aqui para ajudar!
                         </p>
                             <br>
-                                <!-- <hr> -->
+                             
                             <br>
 
-                    <!--add  mensagem  -->
-            </div>
+                 
+            </div> -->
 
         <?php endif; ?>
 

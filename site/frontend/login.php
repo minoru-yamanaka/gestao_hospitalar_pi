@@ -35,7 +35,11 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
     <title>Login</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body style="
+display:flex ; 
+justify-content: center;
+align-items: center;
+">
     <!-- <h1>Login</h1>
     <?php if(isset($erro)) echo "<p style='color:red'>$erro</p>";?>
     <form action="login.php"  method="post">
